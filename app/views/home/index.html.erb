@@ -1,5 +1,4 @@
 <div class="ask">
-  <%= render "home/errormsgs" %>
 
   <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-4", url: create_question_path) do |f| %>
     <%= f.text_field :author, :label => "Name" %>

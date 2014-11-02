@@ -19,7 +19,17 @@ h1 a:hover {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
   color: #98ddf2;
   font-family: "Helvetica Neue";
+}
+
+.front {
+  font-size: 3em;
+  color: #98ddf2;
+}
+
+a:hover.front {
+  color: #81f6de;
+  text-decoration: none;
 }

@@ -1,10 +1,3 @@
-# tweet_spec.rb
-# Testing validations of body (presence and length)
-# Testing any addition methods you add
-# tweets_controller_spec.rb
-# Test each controller action
-# No need to test private actions
-
 require 'rails_helper'
 
 describe Question do
@@ -23,6 +16,16 @@ describe Question do
   describe  "when name of author is not present" do
     before { @question.author = "" }
     it { should_not be_valid }
+  end
+
+  describe "when body is not present" do
+    before { @question.body = "" }
+    it { should_not be_valid }
+  end
+
+  describe "when body is too long" do
+    before { @question.body = "a" * 201 }
+    it { should_not be_valid}
   end
 
 end

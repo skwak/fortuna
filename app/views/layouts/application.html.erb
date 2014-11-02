@@ -3,12 +3,20 @@
 <head>
   <title>Fortuna</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <header class="row">
+    <h1><%= link_to "FORTUNA", home_path %> <small>Be bold. Seek answers publicly.</h1>
+  </header>
+
+  <%= yield %>
+  
+</div>
 
 </body>
 </html>

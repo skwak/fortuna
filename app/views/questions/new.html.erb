@@ -1,5 +1,9 @@
+<h2>What question do you have for Fortuna?</h2>
+
 <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-8") do |f| %>
   <%= f.text_field :author, :label => "Name" %>
   <%= f.text_area :body, :label => "Your question" %>
-  <%= f.submit "Submit" %>
+  <div class="span7 text-center">
+    <%= f.submit "Submit" %>
+  </div>
 <% end %>

@@ -37,7 +37,6 @@ describe QuestionsController do
 
   end
 
-
   subject { "show" }
 
   it "renders show template" do

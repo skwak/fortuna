@@ -1,6 +1,9 @@
-<% @questions.each do |question| %>
-  <ul>
-    <li><%= question.body %></li>
-    <li>Asked by <%= question.author %> on <%= question.created_at %></li>
-  </ul>
-<% end %>
+<ul>
+  <% @questions.each do |question| %>
+    <li>
+      <div class="show-question">
+        <span class="special-question">"<%= question.body %>"</span> asked <%= link_to question.author, question_path(question) %> on <%= local_time(question.created_at) %>
+      </div>
+    </li>
+  <% end %>
+</ul>

@@ -1,7 +1,13 @@
 <%= link_to "Ask Fortuna a question.", new_question_path, class: "front" %>
 
-<% @questions.each do |question| %>
-  <div class="show-question">
-    <span class="special-question">"<%= question.body %>"</span> asked <%= link_to question.author, question_path(question) %> on <%= question.created_at %>.
-  </div>
-<% end %>
+<h3>All questions &amp; fortunes:</h3>
+
+<ul>
+  <% @questions.each do |question| %>
+    <li>
+      <div class="show-question">
+        <span class="special-question">"<%= question.body %>"</span> asked <%= link_to question.author, question_path(question) %> on <%= local_time(question.created_at) %>
+      </div>
+    </li>
+  <% end %>
+</ul>

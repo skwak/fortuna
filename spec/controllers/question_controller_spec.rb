@@ -27,15 +27,17 @@ describe QuestionsController do
 
   subject { "questions#new" }
 
-  it "should get new form" do
-    get "new"
+  it "creates a question and redirects to the home path" do
+    get :new
+    expect(response).to render_template(:new)
+
+    post "create", :question => {:author => "Sally", :body => "Am I alive?" }
+
+    expect(response).to redirect_to home_path
+
   end
 
-  subject { "questions#create" }
 
-  it "should redirect to home_path" do
-    post "create"
-  end
 
 
 end

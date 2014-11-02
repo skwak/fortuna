@@ -1,0 +1,6 @@
+<% @questions.each do |question| %>
+  <ul>
+    <li><%= question.body %></li>
+    <li>Asked by <%= question.author %> on <%= question.created_at %></li>
+  </ul>
+<% end %>

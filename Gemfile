@@ -49,4 +49,6 @@ end
 
 gem 'bootstrap-sass', '3.2.0.2'
 
+gem 'bootstrap_form'
+
 gem 'rails_12factor', group: :production

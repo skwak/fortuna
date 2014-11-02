@@ -1,4 +1,10 @@
 class QuestionsController < ApplicationController
+# tweet_spec.rb
+# Testing validations of body (presence and length)
+# Testing any addition methods you add
+# tweets_controller_spec.rb
+# Test each controller action
+# No need to test private actions
 
   def index
     @questions = Question.all

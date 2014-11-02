@@ -11,5 +11,11 @@ describe QuestionsController do
     get "index"
   end
 
+  subject { "questions#new"}
+
+  it "should get new form" do
+    get "new"
+  end
+
 
 end

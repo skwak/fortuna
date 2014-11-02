@@ -1,6 +1,18 @@
-<%= link_to "Ask Fortuna a question.", new_question_path, class: "front" %>
+<div class="ask">
+  <%= render "home/errormsgs" %>
 
-<ul class="list-group">
+  <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-4", url: create_question_path) do |f| %>
+    <%= f.text_field :author, :label => "Name" %>
+    <%= f.text_area :body, :label => "Your question" %>
+
+    <div class="span7 col-sm-offset-2">
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="submissions">
+  <ul class="list-group">
   <% @questions.each do |question| %>
     <li class="list-group-item">
       <div class="show-question">
@@ -8,4 +20,5 @@
       </div>
     </li>
   <% end %>
-</ul>
+  </ul>
+</div>

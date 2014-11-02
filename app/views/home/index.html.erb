@@ -4,7 +4,7 @@
   <% @questions.each do |question| %>
     <li class="list-group-item">
       <div class="show-question">
-        <span class="special-question">"<%= question.body %>"</span> asked <%= link_to question.author, question_path(question) %> on <%= local_time(question.created_at) %>
+        <span class="special-question">"<%= question.body %>"</span> <%= link_to "asked #{question.author}", question_path(question) %> on <%= local_time(question.created_at) %>
       </div>
     </li>
   <% end %>

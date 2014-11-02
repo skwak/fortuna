@@ -1,6 +1,3 @@
-# Test each controller action
-# No need to test private actions
-
 require 'rails_helper'
 
 describe QuestionsController do

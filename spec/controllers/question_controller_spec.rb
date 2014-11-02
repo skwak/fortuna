@@ -5,7 +5,7 @@ require 'rails_helper'
 
 describe QuestionsController do
 
-  subject { "questions#index" }
+  subject { "index" }
 
   it "should get index" do
     get :index
@@ -25,7 +25,7 @@ describe QuestionsController do
       expect(assigns(:questions)).to match_array([question1, question2])
   end
 
-  subject { "questions#new" }
+  subject { "new and create" }
 
   it "creates a question and redirects to the home path" do
     get :new
@@ -38,6 +38,12 @@ describe QuestionsController do
   end
 
 
+  subject { "show" }
 
+  it "renders show template" do
+      question3 = Question.create!(author: "lalaland", body: "Is there a God?")
+      get :show, id: question3
+      response.should render_template :show
+  end
 
 end

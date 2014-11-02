@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root "home#index", as: :home
+  root "home#index",                                as: :home
+
+  get "/questions",        to: "questions#index",   as: :questions
+  get "/questions/new",    to: "questions#new",     as: :new_question
+  post "/questions",       to: "questions#create",  as: :create_question
+  get "/questions/:id",    to: "questions#show",    as: :question
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

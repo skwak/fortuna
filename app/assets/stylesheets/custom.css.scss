@@ -29,7 +29,7 @@ h2 {
   color: #98ddf2;
 }
 
-a:hover.front {
+a:hover.front, a:hover {
   color: #81f6de;
   text-decoration: none;
 }
@@ -41,4 +41,8 @@ a:hover.front {
 .special-question {
   font-size: 2em;
   color: #575a5a;
+}
+
+a {
+  color: #98ddf2;
 }

@@ -1,5 +1,6 @@
 <div class="ask">
 
+<h2>Ask a Question</h2>
   <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-4", url: create_question_path) do |f| %>
     <%= f.text_field :author, :label => "Name" %>
     <%= f.text_area :body, :label => "Your question" %>
@@ -15,9 +16,9 @@
   <% @questions.each do |question| %>
     <li class="list-group-item">
       <div class="show-question">
-        <span class="special-question">"<%= question.body %>"</span> <%= link_to "asked #{question.author}", question_path(question) %> on <%= local_time(question.created_at) %>
+        <%= link_to "#{question.author} asks", question_path(question) %> on <%= local_time(question.created_at) %>: <span class="special-question">"<%= question.body %>"</span>
       </div>
-      Fortuna says "<%= @fortunes.sample %>"
+      <span class="fortuna-answer"><em>FORTUNA</em>'s reply: <%= question.fortune %></span>
     </li>
   <% end %>
   </ul>

@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @question = Question.question_and_fortune(question_params)
     if @question.save
       redirect_to home_path
     else

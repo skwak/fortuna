@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    (params.require(:question).permit(:body, :author))
+    (params.require(:question).permit(:body, :author, :fortune))
   end
 
 end

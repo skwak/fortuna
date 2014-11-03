@@ -16,9 +16,9 @@
   <% @questions.each do |question| %>
     <li class="list-group-item">
       <div class="show-question">
-        <%= link_to "#{question.author} asks", question_path(question) %> on <%= local_time(question.created_at) %>: <span class="special-question">"<%= question.body %>"</span>
+        <span class="special-question">"<%= question.body %>"</span> <%= link_to "asked #{question.author}", question_path(question) %> on <%= local_time(question.created_at) %><br>
+        <span class="fortuna-answer">"<%= question.fortune %>" Fortuna replied.</span>
       </div>
-      <span class="fortuna-answer"><em>FORTUNA</em>'s reply: <%= question.fortune %></span>
     </li>
   <% end %>
   </ul>

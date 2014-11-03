@@ -1,4 +1,4 @@
 <div class="show-question">
   <span class="special-question">"<%= @question.body %>"</span> <%= link_to "asked #{@question.author}", question_path(@question) %> on <%= local_time(@question.created_at) %><br>
-  <span class="fortuna-answer">"<%= @question.fortune %>," Fortuna replied.</span>
+  <span class="fortuna-answer">"<%= @question.fortune %>" Fortuna replied.</span>
 </div>

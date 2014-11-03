@@ -1,6 +1,6 @@
 <div class="ask">
 
-<h2>Ask a Question</h2>
+<h2>Ask a Question:</h2>
   <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-4", url: create_question_path) do |f| %>
     <%= f.text_field :author, :label => "Name" %>
     <%= f.text_area :body, :label => "Your question" %>

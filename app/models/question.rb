@@ -8,4 +8,8 @@ class Question < ActiveRecord::Base
     question.fortune = Fortune.new.fortunes_array.sample
     question
   end
+
+  def self.sort_by_time
+    all.sort_by { |question| question.created_at }.reverse
+  end
 end

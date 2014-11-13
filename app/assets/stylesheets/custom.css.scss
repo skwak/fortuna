@@ -18,18 +18,20 @@ h1 a:hover {
   color: #000000;
 }
 
+h2, .front, a {
+  color: #0090b4;
+
+}
 h2 {
   font-size: 1.7em;
-  color: #98ddf2;
 }
 
 .front {
   font-size: 3em;
-  color: #98ddf2;
 }
 
 a:hover.front, a:hover {
-  color: #81f6de;
+  color: #4c4c4c;
   text-decoration: none;
 }
 
@@ -41,9 +43,6 @@ a:hover.front, a:hover {
   font-size: 2em;
 }
 
-a {
-  color: #98ddf2;
-}
 
 .ask {
   padding-bottom: 1em;

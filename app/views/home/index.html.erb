@@ -2,8 +2,8 @@
 
 <h2>Ask a Question:</h2>
   <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-4", url: create_question_path) do |f| %>
-    <%= f.text_field :author, :label => "Name" %>
-    <%= f.text_area :body, :label => "Your question" %>
+    <%= f.text_field :author, :label => "Your Name", :placeholder => "Linnea" %>
+    <%= f.text_area :body, :label => "Your Question", :placeholder => "Will today be a good day?" %>
 
     <div class="span7 col-sm-offset-2">
       <%= f.submit "Submit" %>

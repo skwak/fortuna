@@ -3,8 +3,8 @@
 <%= render "errormsgs" %>
 
 <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-8") do |f| %>
-  <%= f.text_field :author, :label => "Name" %>
-  <%= f.text_area :body, :label => "Your question" %>
+  <%= f.text_field :author, :label => "Name", :placeholder => "Linnea" %>
+  <%= f.text_area :body, :label => "Your question", :placeholder => "Will today be a good day?" %>
   <div class="span7 text-center">
     <%= f.submit "Submit" %>
   </div>

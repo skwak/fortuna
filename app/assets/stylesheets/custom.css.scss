@@ -2,6 +2,7 @@
 @import "bootstrap";
 
 .top {
+  // moon image by Jalan's Place on Flickr: https://flic.kr/p/p9EgS4
   background-image: url(image_path('moon.png'));
   background-repeat: no-repeat;
   background-size: 6em;
@@ -42,7 +43,6 @@ a:hover.front, a:hover {
 .special-question {
   font-size: 2em;
 }
-
 
 .ask {
   padding-bottom: 1em;

@@ -4,7 +4,6 @@
   <%= bootstrap_form_for(@question, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-4", url: create_question_path) do |f| %>
     <%= f.text_field :author, :label => "Your Name", :placeholder => "Linnea" %>
     <%= f.text_area :body, :label => "Your Question", :placeholder => "Will today be a good day?" %>
-
     <div class="span7 col-sm-offset-2">
       <%= f.submit "Submit" %>
     </div>
@@ -12,7 +11,7 @@
 </div>
 
 <div class="submissions">
-  <ul class="list-group">
+  <ul class="list-group" id="questions">
   <% @questions.each do |question| %>
     <li class="list-group-item">
       <div class="show-question">
